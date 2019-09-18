@@ -1,15 +1,15 @@
 function init() {
-  getData();
+  getData(); //stampo dati ad apertura pagina
 
-  $(document).on('click', 'i.delete', deleteData);
-}
+  $(document).on('click', 'i.delete', deleteData); //cancellazione al click
+} //funzione principale
 
 $(document).ready(init);
 
 
 function getData() {
 
-  $('.container .stanza div div').html('');
+  $('.container .stanza div div').html(''); //pulisco html
 
   $.ajax({
     url: 'dati1.php',
@@ -51,22 +51,22 @@ function getData() {
       console.log('Errore');
     }
   })
-}
+} //per prendere elementi
 
 function deleteData() {
   var elemento = $(this);
   var name = elemento.parent();
-  var numId = name.data('id');
+  var numId = name.data('id'); //prendo id
 
   $.ajax({
     url: 'dataDel.php',
     method: 'GET',
     data: {id: numId},
     success: function() {
-      getData();
+      getData(); //stampo nuovamente i dati
     },
     error: function() {
 
     }
   });
-}
+} //per cancellare elementi
