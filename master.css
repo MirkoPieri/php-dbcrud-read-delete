@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div.stanza {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.stanza > div {
+  border: 8px solid grey;
+  border-radius: 10px;
+}
+
+div.stanza div p {
+  display: inline;
+  font-size: 20pt;
+}
+
+div.stanza h1 {
+  text-align: center;
+}
+
+div.stanza .accepted {
+  width: 33%;
+  height: auto;
+  background-color: green;
+}
+
+div.stanza div .entry  {
+padding: 50px 30px;
+}
+
+div.stanza div .entry i  {
+margin-left: 50px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+border-radius: 50%;
+padding: 10px;
+}
+
+div.stanza div .entry i:hover {
+  color: black;
+  background-color: white;
+}
+
+div.rejected {
+  width: 33%;
+  height: auto;
+  background-color: red;
+}
+
+div.pending {
+  width: 33%;
+  height: auto;
+  background-color: orange;
+}
